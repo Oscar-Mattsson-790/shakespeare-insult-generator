@@ -3,7 +3,7 @@ import "./App.css";
 import AddInsult from "./components/AddInsult/AddInsult";
 import ShowInsult from "./components/ShowInsult/ShowInsult";
 
-const displayInsult = [
+let insultArray = [
   {
     insult:
       "Were such things here as we do speak about? Or have we eaten on the insane root That takes the reason prisoner?",
@@ -53,20 +53,26 @@ const displayInsult = [
   },
 ];
 
-function handleClick() {
-  let randomInsult =
-    displayInsult[Math.floor(Math.random() * displayInsult.length)];
-  console.log(randomInsult);
-}
-
 function App() {
-  const [insult, setInsult] = useState(0);
+  const [randomInsult, setRandomInsult] = useState({});
+
+  function handleClick() {
+    setRandomInsult(
+      insultArray[Math.floor(Math.random() * insultArray.length)]
+    );
+  }
 
   return (
     <div className="App">
-      <AddInsult handleClick={() => handleClick()} />
+      <AddInsult
+        handleClick={() => handleClick()}
+        insult={randomInsult.insult}
+        play={randomInsult.play}
+        insultArray={insultArray}
+      />
+
       <div className="app-wrapper">
-        {displayInsult.map((insult, key) => (
+        {insultArray.map((insult, key) => (
           <ShowInsult insult={insult.insult} play={insult.play} key={key} />
         ))}
       </div>
