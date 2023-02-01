@@ -53,8 +53,6 @@ const displayInsult = [
   },
 ];
 
-// var randomObject = objects[Math.floor(Math.random() * objects.length)];
-
 function handleClick() {
   let randomInsult =
     displayInsult[Math.floor(Math.random() * displayInsult.length)];
