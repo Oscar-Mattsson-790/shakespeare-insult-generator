@@ -1,0 +1,29 @@
+.btn {
+  font-family: "MedievalSharp", cursive;
+  background-color: rgb(207, 138, 34);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  height: 40px;
+  width: 120px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.header_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "MedievalSharp", cursive;
+}
+
+.input_field {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 8px;
+}
