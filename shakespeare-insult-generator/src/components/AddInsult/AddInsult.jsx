@@ -1,13 +1,15 @@
 import React from "react";
 import "./AddInsult.css";
 
-function AddInsult() {
+function AddInsult({ handleClick }) {
   return (
     <div className="header_wrapper">
       <h1>Insult generator</h1>
       <input className="input_field" type="text" placeholder="Enter insult" />
       <input className="input_field" type="text" placeholder="Enter play" />
-      <button className="btn">Show insults</button>
+      <button className="btn" onClick={handleClick}>
+        Show insults
+      </button>
     </div>
   );
 }

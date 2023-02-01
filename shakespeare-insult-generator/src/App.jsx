@@ -53,12 +53,20 @@ const displayInsult = [
   },
 ];
 
+// var randomObject = objects[Math.floor(Math.random() * objects.length)];
+
+function handleClick() {
+  let randomInsult =
+    displayInsult[Math.floor(Math.random() * displayInsult.length)];
+  console.log(randomInsult);
+}
+
 function App() {
-  const [count, setCount] = useState(0);
+  const [insult, setInsult] = useState(0);
 
   return (
     <div className="App">
-      <AddInsult />
+      <AddInsult handleClick={() => handleClick()} />
       <div className="app-wrapper">
         {displayInsult.map((insult, key) => (
           <ShowInsult insult={insult.insult} play={insult.play} key={key} />
