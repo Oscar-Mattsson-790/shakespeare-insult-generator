@@ -4,4 +4,7 @@
   font-family: "MedievalSharp", cursive;
   background-color: blanchedalmond;
   border-radius: 5px;
+  border: 2px solid blanchedalmond;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

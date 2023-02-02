@@ -8,6 +8,7 @@
   width: 120px;
   font-size: 15px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .header_wrapper {
@@ -23,7 +24,17 @@
   outline: none;
   border-radius: 5px;
   height: 30px;
-  width: 150px;
+  width: 250px;
   text-align: center;
   margin-bottom: 8px;
+}
+
+.added_insult_box {
+  font-family: "MedievalSharp", cursive;
+  background-color: blanchedalmond;
+  border-radius: 5px;
+  border: 2px solid blanchedalmond;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 20px;
 }

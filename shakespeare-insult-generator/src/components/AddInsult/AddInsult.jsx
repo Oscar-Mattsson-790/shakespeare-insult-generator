@@ -22,22 +22,28 @@ function AddInsult({ insult, play, handleClick, insultArray }) {
       <button className="btn" onClick={handleClick}>
         Random insult
       </button>
-      <p>{insult}</p>
-      <p>{play}</p>
+      <div className="added_insult_box">
+        <p>{insult}</p>
+        <p>{play}</p>
+      </div>
       <input
         className="input_field"
         type="text"
         placeholder="Enter insult"
         value={customInsult}
-        onChange={(e) => setCustomInsult(e.target.value)}
+        onChange={(event) => setCustomInsult(event.target.value)}
       />
       <input
         className="input_field"
         type="text"
         placeholder="Enter play"
         value={cumstomPlay}
-        onChange={(e) => setCustomPlay(e.target.value)}
+        onChange={(event) => setCustomPlay(event.target.value)}
       />
+      <div className="added_insult_box">
+        <p>{customInsult}</p>
+        <p>{cumstomPlay}</p>
+      </div>
       <button className="btn" onClick={addInsult}>
         Add Insult
       </button>
