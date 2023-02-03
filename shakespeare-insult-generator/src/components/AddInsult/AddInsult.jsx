@@ -5,15 +5,13 @@ import "./AddInsult.css";
 
 function AddInsult({ insult, play, handleClick, insultArray }) {
   const [customInsult, setCustomInsult] = useState("");
-  const [cumstomPlay, setCustomPlay] = useState("");
+  const [customPlay, setCustomPlay] = useState("");
 
   function addInsult() {
-    insultArray.push({ insult: customInsult, play: cumstomPlay });
+    insultArray.push({ insult: customInsult, play: customPlay });
 
     setCustomInsult("");
     setCustomPlay("");
-
-    console.log(insultArray);
   }
 
   return (
@@ -37,12 +35,12 @@ function AddInsult({ insult, play, handleClick, insultArray }) {
         className="input_field"
         type="text"
         placeholder="Enter play"
-        value={cumstomPlay}
+        value={customPlay}
         onChange={(event) => setCustomPlay(event.target.value)}
       />
       <div className="added_insult_box">
         <p>{customInsult}</p>
-        <p>{cumstomPlay}</p>
+        <p>{customPlay}</p>
       </div>
       <button className="btn" onClick={addInsult}>
         Add Insult
